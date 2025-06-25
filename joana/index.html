@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gincana de Aniversário - Joana Kelly</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Feliz Aniversário Joana Kelly!</h1>
+        <div class="instructions">Uma surpresa especial espera por você!</div>
+        
+        <div class="intro-content">
+            <div class="message-box">
+                <p>Para descobrir seu presente de aniversário, você precisará completar uma pequena gincana com 3 desafios divertidos.</p>
+                <p>Cada desafio que você completar te levará mais perto da surpresa!</p>
+            </div>
+            
+            <div class="gift-preview">
+                <img src="images/gift-box.png" alt="Presente Misterioso" class="mystery-gift">
+                <p class="mystery-text">O que será?</p>
+            </div>
+            
+            <a href="x82c4d5a3.html" class="start-button">Começar Gincana!</a>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress-step">1</div>
+            <div class="progress-line"></div>
+            <div class="progress-step">2</div>
+            <div class="progress-line"></div>
+            <div class="progress-step">3</div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animação simples para a caixa de presente
+            const giftBox = document.querySelector('.mystery-gift');
+            
+            setInterval(function() {
+                giftBox.classList.toggle('pulse');
+            }, 1500);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gincana de Aniversário - Joana Kelly</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Feliz Aniversário Joana Kelly!</h1>
+        <div class="instructions">Bem-vinda à sua gincana de aniversário!</div>
+        
+        <div class="challenge">
+            <h2>Desafio #1: Adivinhe a Charada</h2>
+            <div class="riddle-box">
+                <p class="riddle">O que é, o que é? Quanto mais você tira, maior eu fico.</p>
+            </div>
+            
+            <div class="answer-section">
+                <input type="text" id="riddle-answer" placeholder="Digite sua resposta...">
+                <button id="check-answer">Verificar</button>
+                <p id="hint" class="hidden">Dica: Pense em um buraco...</p>
+                <p id="feedback" class="feedback"></p>
+            </div>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress-step active">1</div>
+            <div class="progress-line"></div>
+            <div class="progress-step">2</div>
+            <div class="progress-line"></div>
+            <div class="progress-step">3</div>
+        </div>
+    </div>
+    
+    <script src="desafio_charada.js"></script>
+</body>
+</html>

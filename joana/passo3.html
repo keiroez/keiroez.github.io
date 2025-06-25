@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gincana de Aniversário - Joana Kelly</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Feliz Aniversário Joana Kelly!</h1>
+        <div class="instructions">Chegou a hora de descobrir seu presente! Arraste o dedo ou o mouse para raspar e revelar!</div>
+        
+        <div class="scratch-card-container">
+            <div class="prize-content">
+                <span class="prize-text">Seu presente especial é:</span>
+                <span class="prize-value">Olympikus corre 4</span>
+                <div class="gift-image">
+                    <img id="prize-image" src="images/image.png" alt="Tênis Olympikus corre 4" />
+                </div>
+                <a href="https://www.olympikus.com.br/tenis-olympikus-corre-4-43720366-3-024/p?utm_source=google&utm_campaign=googlepla&gad_source=1&gad_campaignid=21956277535&gbraid=0AAAAACpLBwtEzgi9_d_uZ56Dh7JHlOBhm&gclid=CjwKCAjwvO7CBhAqEiwA9q2YJWl3-K4k6gGCWHWUeWYdJLBxBFEXP5P8axCCBzMNbtL8swnV7AzY1BoC7RwQAvD_BwE" class="details-link" target="_blank">Ver detalhes do tênis</a>
+            </div>
+            <canvas id="scratch-card" width="300" height="300"></canvas>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress-step completed">1</div>
+            <div class="progress-line completed"></div>
+            <div class="progress-step completed">2</div>
+            <div class="progress-line completed"></div>
+            <div class="progress-step active">3</div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
