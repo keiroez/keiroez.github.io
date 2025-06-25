@@ -2,9 +2,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const optionButtons = document.querySelectorAll('.option-btn');
     const feedback = document.getElementById('puzzle-feedback');
     const hint = document.getElementById('puzzle-hint');
+    const hint2 = document.getElementById('puzzle-hint2');
     
-    // Resposta correta
-    const correctOption = 'passo';
+    // Resposta correta: B) Bolo → Velas → Parabéns → Presente
+    const correctOption = 'B';
     
     let attempts = 0;
     
@@ -16,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.add('selected');
             
             if (selectedOption === correctOption) {
-                feedback.textContent = "Isso mesmo! Para chegar a seus objetivos, você precisa dar o primeiro PASSO!";
+                feedback.textContent = "Isso mesmo! 🎂 Primeiro o bolo com velas, depois cantamos Parabéns, sopramos as velas e por fim o presente!";
                 feedback.className = "feedback correct";
                 
                 // Destacar o botão correto
@@ -25,17 +26,31 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Ir para o próximo passo após um pequeno delay
                 setTimeout(function() {
                     window.location.href = "surpresa_final.html";
-                }, 2000);
+                }, 3000);
                 
             } else {
                 attempts++;
-                feedback.textContent = "Hmmm, não é bem isso. Tente outra opção!";
+                
+                // Feedback específico para cada resposta errada
+                if (selectedOption === 'A') {
+                    feedback.textContent = "Quase! Mas cantamos 'Parabéns' antes de soprar as velas, não depois.";
+                } else if (selectedOption === 'C') {
+                    feedback.textContent = "Não é isso! O presente geralmente vem no final da celebração.";
+                } else if (selectedOption === 'D') {
+                    feedback.textContent = "Errado! As velas não vêm antes do bolo, elas ficam no bolo!";
+                }
+                
                 feedback.className = "feedback incorrect";
                 this.classList.add('incorrect');
                 
-                // Mostrar dica após a primeira tentativa errada
+                // Mostrar primeira dica após a primeira tentativa errada
                 if (attempts >= 1 && hint.classList.contains('hidden')) {
                     hint.classList.remove('hidden');
+                }
+                
+                // Mostrar segunda dica após 2 tentativas erradas
+                if (attempts >= 2 && hint2.classList.contains('hidden')) {
+                    hint2.classList.remove('hidden');
                 }
             }
         });
